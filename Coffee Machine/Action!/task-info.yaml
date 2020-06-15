@@ -281,6 +281,28 @@ files:
     if __name__ == '__main__':
         CoffeeMachineTest('machine.coffee_machine').run_tests()
   learner_created: false
+- name: machine/coffee_machine.py
+  visible: true
+  text: "# Write your code here\n\nimport math\n\nprint(\"\"\"Starting to make a coffee\n\
+    Grinding coffee beans\nBoiling water\nMixing boiled water with crushed coffee\
+    \ beans\nPouring coffee into the cup\nPouring some milk into the cup\nCoffee is\
+    \ ready!\"\"\")\n\n\n# Part 2\n# cups = int(input(\"Write how many cups of coffee\
+    \ you will need: >\"))\n\nwater = 200\nmilk = 50\nbeans = 15\n\n# print(\"For\
+    \ \" + str(cups)  + \" cups of coffee you will need:\")\n# print(str(cups * water)\
+    \ + \"ml of water\")\n# print(str(cups * milk) + \"ml of milk\")\n# print(str(cups\
+    \ * beans) + \"g of beans\")\n\n# part 3\nwater_left = int(input(\"Write how many\
+    \ ml of water the coffee machine has:> \"))\nmilk_left = int(input(\"Write how\
+    \ many ml of milk the coffee machine has:> \"))\nbeans_left = int(input(\"Write\
+    \ how many grams of coffee beans the coffee machine has:> \"))\ncups_needed =\
+    \ int(input(\"Write how many cups of coffee you will need:> \"))\n\nable_water\
+    \ = math.floor(water_left / water)\nable_milk = math.floor(milk_left / milk)\n\
+    able_beans = math.floor(beans_left / beans)\n\nlist = [able_beans, able_water,\
+    \ able_milk]\n\nif min(list) == cups_needed:\n\tprint(\"Yes, I can make that amount\
+    \ of coffee\")\nelif min(list) > cups_needed:\n\tprint (\"Yes, I can make that\
+    \ amount of coffee\", \"(and even \" + str(min(list) - cups_needed) + \" more\
+    \ than that)\" )\nelif min(list) < cups_needed:\n\tprint (\"No, I can make only\
+    \ \" + str(min(list)) + \" cups of coffee\")\n\n\n"
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/68/stages/369/implement
 status: Unchecked
 record: -1

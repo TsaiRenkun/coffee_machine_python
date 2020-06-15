@@ -27,19 +27,35 @@ beans = 15
 water_left = int(input("Write how many ml of water the coffee machine has:> "))
 milk_left = int(input("Write how many ml of milk the coffee machine has:> "))
 beans_left = int(input("Write how many grams of coffee beans the coffee machine has:> "))
-cups_needed = int(input("Write how many cups of coffee you will need:> "))
+# milk_left = int(input("Write how many ml of milk the coffee machine has:> "))
+# beans_left = int(input("Write how many grams of coffee beans the coffee machine has:> "))
+# cups_needed = int(input("Write how many cups of coffee you will need:> "))
+#
+# able_water = math.floor(water_left / water)
+# able_milk = math.floor(milk_left / milk)
+# able_beans = math.floor(beans_left / beans)
 
-able_water = math.floor(water_left / water)
-able_milk = math.floor(milk_left / milk)
-able_beans = math.floor(beans_left / beans)
+# list = [able_beans, able_water, able_milk]
 
-list = [able_beans, able_water, able_milk]
+# if min(list) == cups_needed:
+# 	print("Yes, I can make that amount of coffee")
+# elif min(list) > cups_needed:
+# 	print ("Yes, I can make that amount of coffee", "(and even " + str(min(list) - cups_needed) + " more than that)" )
+# elif min(list) < cups_needed:
+# 	print ("No, I can make only " + str(min(list)) + " cups of coffee")
 
-if min(list) == cups_needed:
-	print("Yes, I can make that amount of coffee")
-elif min(list) > cups_needed:
-	print ("Yes, I can make that amount of coffee", "(and even " + str(min(list) - cups_needed) + " more than that)" )
-elif min(list) < cups_needed:
-	print ("No, I can make only " + str(min(list)) + " cups of coffee")
+
+# part 4
+
+dis_cups = int(input("Write how many disposable cups:> "))
+money = int(input("Write how many much money the coffee machine has:> "))
+
+
+print("The coffee machine has:")
+print(str(water_left) + " of water")
+print(str(milk_left) + " of milk")
+print(str(beans_left) + " of coffee beans")
+print(str(dis_cups) + " of disposable cups")
+print(str(money) + " of money")
 
 
