@@ -58,4 +58,9 @@ print(str(beans_left) + " of coffee beans")
 print(str(dis_cups) + " of disposable cups")
 print(str(money) + " of money")
 
+print(input("Write action(buy, fill, take): >"))
+
+print(input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino: >"))
+
+
 
