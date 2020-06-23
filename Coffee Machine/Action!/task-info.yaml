@@ -304,5 +304,5 @@ files:
     \ \" + str(min(list)) + \" cups of coffee\")\n\n\n"
   learner_created: true
 feedback_link: https://hyperskill.org/projects/68/stages/369/implement
-status: Unchecked
-record: -1
+status: Failed
+record: 4
