@@ -248,6 +248,65 @@ files:
     if __name__ == '__main__':
         CoffeeMachineTest('machine.coffee_machine').run_tests()
   learner_created: false
+- name: machine/coffee_machine.py
+  visible: true
+  text: "# Write your code here\n\n\nimport math\n\n# print(\"\"\"Starting to make\
+    \ a coffee\n# Grinding coffee beans\n# Boiling water\n# Mixing boiled water with\
+    \ crushed coffee beans\n# Pouring coffee into the cup\n# Pouring some milk into\
+    \ the cup\n# Coffee is ready!\"\"\")\n#\n\n# Part 2\n# cups = int(input(\"Write\
+    \ how many cups of coffee you will need: >\"))\n\n# water = 200\n# milk = 50\n\
+    # beans = 15\n\n# print(\"For \" + str(cups)  + \" cups of coffee you will need:\"\
+    )\n# print(str(cups * water) + \"ml of water\")\n# print(str(cups * milk) + \"\
+    ml of milk\")\n# print(str(cups * beans) + \"g of beans\")\n\n# part 3\n\n# #\
+    \ milk_left = int(input(\"Write how many ml of milk the coffee machine has:> \"\
+    ))\n# # beans_left = int(input(\"Write how many grams of coffee beans the coffee\
+    \ machine has:> \"))\n# cups_needed = int(input(\"Write how many cups of coffee\
+    \ you will need:> \"))\n#\n# able_water = math.floor(water_left / water)\n# able_milk\
+    \ = math.floor(milk_left / milk)\n# able_beans = math.floor(beans_left / beans)\n\
+    \n# list = [able_beans, able_water, able_milk]\n\n# if min(list) == cups_needed:\n\
+    # \tprint(\"Yes, I can make that amount of coffee\")\n# elif min(list) > cups_needed:\n\
+    # \tprint (\"Yes, I can make that amount of coffee\", \"(and even \" + str(min(list)\
+    \ - cups_needed) + \" more than that)\" )\n# elif min(list) < cups_needed:\n#\
+    \ \tprint (\"No, I can make only \" + str(min(list)) + \" cups of coffee\")\n\n\
+    \n# part 4\n# water_left = int(input(\"Write how many ml of water the coffee machine\
+    \ has:> \"))\n# milk_left = int(input(\"Write how many ml of milk the coffee machine\
+    \ has:> \"))\n# beans_left = int(input(\"Write how many grams of coffee beans\
+    \ the coffee machine has:> \"))\n# dis_cups = int(input(\"Write how many disposable\
+    \ cups:> \"))\n# money = int(input(\"Write how many much money the coffee machine\
+    \ has:> \"))\n\nwater_left = 400\nmilk_left = 540\nbeans_left = 120\ndis_cups\
+    \ = 9\nmoney = 550\n#\n\nprint(\"The coffee machine has:\")\nprint(str(water_left)\
+    \ + \" of water\")\nprint(str(milk_left) + \" of milk\")\nprint(str(beans_left)\
+    \ + \" of coffee beans\")\nprint(str(dis_cups) + \" of disposable cups\")\nprint(str(money)\
+    \ + \" of money\")\nprint(\"\")\n\nchoice_input = str(input(\"Write action(buy,\
+    \ fill, take): \"))\n\nif(choice_input == \"buy\"):\n\n\tdef espresso():\n\t\t\
+    water_needed = 250\n\t\tmilk_needed = 0\n\t\tcoffee_needed = 16\n\t\tcost = 4\n\
+    \t\treturn water_needed,milk_needed,coffee_needed,cost\n\n\tdef latte():\n\t\t\
+    water_needed = 350\n\t\tmilk_needed = 75\n\t\tcoffee_needed = 20\n\t\tcost = 7\n\
+    \t\treturn water_needed,milk_needed,coffee_needed,cost\n\n\n\tdef cappuccino():\n\
+    \t\twater_needed = 200\n\t\tmilk_needed = 100\n\t\tcoffee_needed = 12\n\t\tcost\
+    \ = 6\n\t\treturn water_needed, milk_needed, coffee_needed,cost\n\n\tdef buying_drink(i):\n\
+    \t\tswitcher = {\n\t\t\t1: espresso(),\n\t\t\t2: latte(),\n\t\t\t3: cappuccino()\n\
+    \t\t}\n\t\tres = switcher.get(i, \"Invalid choice of drink\")\n\t\treturn res\n\
+    \n\tres = buying_drink(int(input(\"What do you want to buy? 1 - espresso, 2 -\
+    \ latte, 3 - cappuccino: > \")))\n\tprint(\"\")\n\tprint(\"The coffee machine\
+    \ has:\")\n\tprint(str(water_left - res[0]) + \" of water\")\n\tprint(str(milk_left\
+    \ - res[1]) + \" of milk\")\n\tprint(str(beans_left - res[2]) + \" of coffee beans\"\
+    )\n\tprint(str(dis_cups - 1) + \" of disposable cups\")\n\tprint(str(money + res[3])\
+    \ + \" of money\")\n\nelif(choice_input == \"fill\"):\n\n\tadd_water =\tint(input(\"\
+    Write how many ml of water do you want to add: > \"));\n\tadd_milk =\tint(input(\"\
+    Write how many ml of milk do you want to add: > \"));\n\tadd_coffee = int(input(\"\
+    Write how many grams of coffee beans do you want to add: > \"));\n\tadd_cup =\t\
+    int(input(\"Write how many disposable cups of coffee do you want to add: > \"\
+    ));\n\tprint(\"\")\n\tprint(\"The coffee machine has:\")\n\tprint(str(water_left\
+    \ + add_water) + \" of water\")\n\tprint(str(milk_left + add_milk) + \" of milk\"\
+    )\n\tprint(str(beans_left + add_coffee) + \" of coffee beans\")\n\tprint(str(dis_cups\
+    \ + add_cup) + \" of disposable cups\")\n\tprint(str(money) + \" of money\")\n\
+    \nelif(choice_input == \"take\"):\n\n\tprint(\"I gave you $\" + str(money));\n\
+    \n\tmoney = 0\n\tprint(\"\")\n\tprint(\"The coffee machine has:\")\n\tprint(str(water_left)\
+    \ + \" of water\")\n\tprint(str(milk_left) + \" of milk\")\n\tprint(str(beans_left)\
+    \ + \" of coffee beans\")\n\tprint(str(dis_cups) + \" of disposable cups\")\n\t\
+    print(str(money) + \" of money\")\n\nelse:\n\tprint(\"othering\")\n\n"
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/68/stages/370/implement
 status: Unchecked
-record: -1
+record: 5
