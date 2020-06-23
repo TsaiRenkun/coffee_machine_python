@@ -3,21 +3,21 @@
 
 import math
 
-print("""Starting to make a coffee
-Grinding coffee beans
-Boiling water
-Mixing boiled water with crushed coffee beans
-Pouring coffee into the cup
-Pouring some milk into the cup
-Coffee is ready!""")
-
+# print("""Starting to make a coffee
+# Grinding coffee beans
+# Boiling water
+# Mixing boiled water with crushed coffee beans
+# Pouring coffee into the cup
+# Pouring some milk into the cup
+# Coffee is ready!""")
+#
 
 # Part 2
 # cups = int(input("Write how many cups of coffee you will need: >"))
 
-water = 200
-milk = 50
-beans = 15
+# water = 200
+# milk = 50
+# beans = 15
 
 # print("For " + str(cups)  + " cups of coffee you will need:")
 # print(str(cups * water) + "ml of water")
@@ -25,9 +25,7 @@ beans = 15
 # print(str(cups * beans) + "g of beans")
 
 # part 3
-water_left = int(input("Write how many ml of water the coffee machine has:> "))
-milk_left = int(input("Write how many ml of milk the coffee machine has:> "))
-beans_left = int(input("Write how many grams of coffee beans the coffee machine has:> "))
+
 # # milk_left = int(input("Write how many ml of milk the coffee machine has:> "))
 # # beans_left = int(input("Write how many grams of coffee beans the coffee machine has:> "))
 # cups_needed = int(input("Write how many cups of coffee you will need:> "))
@@ -47,10 +45,18 @@ beans_left = int(input("Write how many grams of coffee beans the coffee machine 
 
 
 # part 4
+# water_left = int(input("Write how many ml of water the coffee machine has:> "))
+# milk_left = int(input("Write how many ml of milk the coffee machine has:> "))
+# beans_left = int(input("Write how many grams of coffee beans the coffee machine has:> "))
+# dis_cups = int(input("Write how many disposable cups:> "))
+# money = int(input("Write how many much money the coffee machine has:> "))
 
-dis_cups = int(input("Write how many disposable cups:> "))
-money = int(input("Write how many much money the coffee machine has:> "))
-
+water_left = 400
+milk_left = 540
+beans_left = 120
+dis_cups = 9
+money = 550
+#
 
 print("The coffee machine has:")
 print(str(water_left) + " of water")
@@ -58,11 +64,11 @@ print(str(milk_left) + " of milk")
 print(str(beans_left) + " of coffee beans")
 print(str(dis_cups) + " of disposable cups")
 print(str(money) + " of money")
+print("")
 
-choice_input = str(input("Write action(buy, fill, take): > "))
+choice_input = str(input("Write action(buy, fill, take): "))
 
 if(choice_input == "buy"):
-	print("buying")
 
 	def espresso():
 		water_needed = 250
@@ -96,9 +102,8 @@ if(choice_input == "buy"):
 		return res
 
 	res = buying_drink(int(input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino: > ")))
-
+	print("")
 	print("The coffee machine has:")
-	print(res)
 	print(str(water_left - res[0]) + " of water")
 	print(str(milk_left - res[1]) + " of milk")
 	print(str(beans_left - res[2]) + " of coffee beans")
@@ -107,12 +112,11 @@ if(choice_input == "buy"):
 
 elif(choice_input == "fill"):
 
-
 	add_water =	int(input("Write how many ml of water do you want to add: > "));
 	add_milk =	int(input("Write how many ml of milk do you want to add: > "));
 	add_coffee = int(input("Write how many grams of coffee beans do you want to add: > "));
 	add_cup =	int(input("Write how many disposable cups of coffee do you want to add: > "));
-
+	print("")
 	print("The coffee machine has:")
 	print(str(water_left + add_water) + " of water")
 	print(str(milk_left + add_milk) + " of milk")
@@ -121,18 +125,18 @@ elif(choice_input == "fill"):
 	print(str(money) + " of money")
 
 elif(choice_input == "take"):
-	print("taking")
 
 	print("I gave you $" + str(money));
 
 	money = 0
-
+	print("")
 	print("The coffee machine has:")
 	print(str(water_left) + " of water")
 	print(str(milk_left) + " of milk")
 	print(str(beans_left) + " of coffee beans")
 	print(str(dis_cups) + " of disposable cups")
 	print(str(money) + " of money")
+
 else:
 	print("othering")
 
