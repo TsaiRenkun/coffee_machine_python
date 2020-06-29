@@ -69,3 +69,6 @@ while i < int(First.item):
 		i += 1
 	else:
 		print("Wrong choice")
+
+
+	print(i)
