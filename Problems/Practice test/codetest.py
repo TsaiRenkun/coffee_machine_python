@@ -57,7 +57,7 @@ while i < int(First.item):
 			i += 1
 	elif int(choice) == 2:
 
-		# fixed Choice
+		# fixed Choicse
 		node_fixed = nodes(choice, pi, Qtyi, int(Si[0]), int(pi) + 1, 0)
 
 		# Helper function
